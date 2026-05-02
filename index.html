@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Untuk Sayang💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at top, #1b2735 0%, #090a0f 100%);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    /* ⭐ STARS */
+    .stars, .stars2, .stars3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: repeat;
+      animation: moveStars 50s linear infinite;
+      z-index: 0;
+    }
+
+    .stars {
+      background-image: radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+                        radial-gradient(1px 1px at 100px 150px, #fff, transparent),
+                        radial-gradient(2px 2px at 200px 80px, #fff, transparent);
+    }
+
+    .stars2 {
+      background-image: radial-gradient(1px 1px at 50px 100px, #fff, transparent),
+                        radial-gradient(2px 2px at 150px 200px, #fff, transparent);
+      animation-duration: 100s;
+    }
+
+    .stars3 {
+      background-image: radial-gradient(1px 1px at 300px 250px, #fff, transparent);
+      animation-duration: 150s;
+    }
+
+    @keyframes moveStars {
+      from { transform: translateY(0); }
+      to { transform: translateY(-1000px); }
+    }
+
+    /* ⭐ CARD */
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 400px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: float 3s ease-in-out infinite;
+      position: relative;
+      z-index: 10;
+      color: #333;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    h1 {
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .movie {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 15px 0;
+      color: #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #e63e5c;
+      transform: scale(1.05);
+    }
+
+    .no-btn {
+      background: #adb5bd;
+      margin-left: 10px;
+    }
+
+    .no-btn:hover {
+      background: #6c757d;
+    }
+	.shooting-star {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px white, 0 0 20px white;
+  animation: shoot 6s linear infinite;
+  opacity: 0;
+  z-index: 1;
+}
+
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(45deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(120vw, 120vh) rotate(45deg);
+    opacity: 0;
+  }
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- stars background -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+<div class="shooting-star" style="animation-delay: 0s;"></div>
+<div class="shooting-star" style="animation-delay: 2s;"></div>
+<div class="shooting-star" style="animation-delay: 4s;"></div>
+<div class="shooting-star" style="animation-delay: 6s;"></div>
+<div class="shooting-star" style="animation-delay: 8s;"></div>
+
+  <!-- Page 1 -->
+  <div class="card" id="page1">
+    <h1>Hi Sayang :)</h1>
+
+    <p>
+      Saya nak minta maaf atas kejadian hari ini. Saya tahu saya banyak tambah stress awak.
+      Saya faham awak dalam condition tak berapa sihat dan sepatutnya saya tak perlu tambah buruk keadaan.
+    </p>
+
+    <p>
+      Sejujurnya, saya betul-betul menyesal dan minta maaf dari hati.
+      Saya faham awak sekarang perlukan ruang dan ketenangan.
+    </p>
+
+    <p>
+      For now saya tak nak ganggu awak. I’m supporting you from here.
+      Jaga diri awak baik-baik. Jangan lupa makan dan rehat.
+      Saya minta maaf banyak-banyak ya sayang.
+    </p>
+
+    <button onclick="nextPage()">Teruskan ➡️</button>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="card" id="page2" style="display:none;">
+    <h1>Hai Sayang 💕</h1>
+
+    <p>Saya nak ajak awak keluar untuk</p>
+
+    <div class="movie"> Jom Tengok Wayang Michael Jackson :3 </div>
+
+    <p>
+      📅 Hari: <strong>Esok</strong><br />
+      🕒 Masa: <strong>Selepas Zohor</strong> (ikut masa awak free act)<br />
+      📍 Tempat: <strong>Belum ditentukan</strong>
+    </p>
+
+    <p>
+      Kalau awak nak tukar masa nanti bagitau okai sayang hikhik
+    </p>
+
+    <button onclick="accept()">Ya, saya nak 💖</button>
+    <button class="no-btn" onclick="reject()">Tak nak 🙈</button>
+  </div>
+
+  <script>
+    function nextPage() {
+      document.getElementById('page1').style.display = 'none';
+      document.getElementById('page2').style.display = 'block';
+    }
+
+    function accept() {
+      alert("YEAYY MAKACIH SAYANGG😘");
+    }
+
+    function reject() {
+      alert("Eh 😢 mana boleh rejectttt 😏");
+    }
+  </script>
+
+</body>
+</html>
